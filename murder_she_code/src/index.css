@@ -134,13 +134,13 @@ button:focus-visible {
   background-color: #b91c1c;
 }
 
-.btn-evil {
-  background: linear-gradient(45deg, #7f1d1d, #991b1b);
+.btn-python {
+  background-color: #3776ab;
 }
 
-.btn-evil:hover {
-  background: linear-gradient(45deg, #991b1b, #b91c1c);
-  box-shadow: 0 0 20px rgba(220, 38, 38, 0.5);
+.btn-python:hover {
+  background-color: #ffd43b;
+  box-shadow: 0 0 20px #ffd43b;
 }
 
 .btn-clear {

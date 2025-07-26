@@ -27,10 +27,16 @@ function Controls() {
         Scramble it
       </button>
       <button
-        className="btn btn-evil"
+        className="btn btn-primary"
         onClick={() => handleButtonClick("schizo", inputCode)}
       >
         Change Something
+      </button>
+      <button
+        className="btn btn-python"
+        onClick={() => handleButtonClick("python", inputCode)}
+      >
+        Python
       </button>
       <button
         className="btn btn-clear"

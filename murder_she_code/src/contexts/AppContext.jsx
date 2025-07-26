@@ -149,6 +149,32 @@ console.log("Total:", calculateTotal(cart));`);
     setOutputCode(inputCode);
   }
 
+  function python(code) {
+    if (!code.trim()) {
+      setOutputCode("Nothing to improve");
+      return;
+    }
+
+    const lines = code.split("\n");
+
+    // Find the maximum line length
+    const maxLength = Math.max(...lines.map((line) => line.length)) + 30;
+
+    const result = lines
+      .map((line) => {
+        if (line.includes(";")) {
+          // Remove semicolon, pad to max length, then add semicolon at the end
+          const withoutSemi = line.replace(/;/g, "");
+          const padding = Math.max(0, maxLength - withoutSemi.length);
+          return withoutSemi + " ".repeat(padding) + ";";
+        }
+        return line;
+      })
+      .join("\n");
+
+    setOutputCode(result);
+  }
+
   const handleButtonClick = (buttonType, code) => {
     switch (buttonType) {
       case "noIndent":
@@ -171,7 +197,9 @@ console.log("Total:", calculateTotal(cart));`);
       case "schizo":
         schizoAttack(code);
         setDisplayDanceBtn(false);
-
+        break;
+      case "python":
+        python(code);
         break;
     }
   };
