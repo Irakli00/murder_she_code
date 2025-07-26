@@ -9,6 +9,7 @@ A web abomination inspired by the beloved VS Code extension Prettier and built i
 But unlike Prettier, Uglier makes your code look like it wasn't written by AI.
 
 💡 What Does It Do?
+![Uglier Screenshot](./src/assets/Screenshot%20from%202025-07-26%2020-41-14.png)
 
 Uglier takes your perfectly fine code… and ruins it.
 
@@ -21,7 +22,7 @@ This tool is pointless But hey — not everything needs a reason to exist. Uglie
 
 🎭 Meet the Mascot
 
-A seasoned executioner  (which i would draw if I had skills to it).
+A seasoned executioner (which i would draw if I had skills to it).
 Uglier mutilates your code and yet somehow keeps it running! (won't fix it if it wasn't running tho)
 
 The result?
@@ -49,5 +50,3 @@ Clone the repo and fire it up in just two commands:
 
     npm i
     npm run dev
-
-
