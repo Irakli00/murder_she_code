@@ -16,7 +16,7 @@ Uglier takes your perfectly fine code… and ruins it.
     Want your indentation to be a mess? ✅
     Tired of moving eyes across screen? ✅
     obsessed with inline codes?✅
-    Want to easily transform your JS code to Python and JS? ✅
+    Want to easily transform your JS code to Python and PHP? ✅
 
 This tool is pointless But hey — not everything needs a reason to exist. Uglier exists because you deserve love, even if your code doesn't.
 
