@@ -39,6 +39,12 @@ function Controls() {
         Python
       </button>
       <button
+        className="btn btn-php"
+        onClick={() => handleButtonClick("php", inputCode)}
+      >
+        PHP
+      </button>
+      <button
         className="btn btn-clear"
         onClick={() => handleButtonClick("clear", inputCode)}
       >

@@ -175,6 +175,16 @@ console.log("Total:", calculateTotal(cart));`);
     setOutputCode(result);
   }
 
+  function php(code) {
+    if (!code.trim()) {
+      setOutputCode("Nothing to improve");
+      return;
+    }
+
+    const result = code.replace(/\b\w+\b/g, "$$$&");
+
+    setOutputCode(result);
+  }
   const handleButtonClick = (buttonType, code) => {
     switch (buttonType) {
       case "noIndent":
@@ -200,6 +210,9 @@ console.log("Total:", calculateTotal(cart));`);
         break;
       case "python":
         python(code);
+        break;
+      case "php":
+        php(code);
         break;
     }
   };
