@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useRef } from "react";
 
 import prettier from "prettier";
 import * as babelParser from "prettier/parser-babel";
@@ -26,6 +26,7 @@ const cart = [
 console.log("Total:", calculateTotal(cart));`);
   const [outputCode, setOutputCode] = useState("");
   const [displayDanceBtn, setDisplayDanceBtn] = useState(false);
+  const intervalRef = useRef(null);
 
   const formatCode = async (code, options) => {
     return await prettier.format(code, {
@@ -137,7 +138,7 @@ console.log("Total:", calculateTotal(cart));`);
     setTimeout(() => {
       clearInterval(intervalId);
       setDisplayDanceBtn(true);
-    }, 4000);
+    }, 2800);
   }
 
   function schizoAttack(code) {
@@ -199,11 +200,7 @@ console.log("Total:", calculateTotal(cart));`);
         code.trim() && setDisplayDanceBtn(true);
         scramble(code);
         break;
-      case "clear":
-        setDisplayDanceBtn(false);
-        setInputCode("");
-        setOutputCode("");
-        break;
+
       case "schizo":
         schizoAttack(code);
         setDisplayDanceBtn(false);
@@ -211,12 +208,20 @@ console.log("Total:", calculateTotal(cart));`);
       case "python":
         python(code);
         setDisplayDanceBtn(false);
-
         break;
       case "php":
         php(code);
         setDisplayDanceBtn(false);
+        break;
+      case "clear":
+        if (intervalRef.current) {
+          clearInterval(intervalRef.current);
+          intervalRef.current = null;
+        }
 
+        setDisplayDanceBtn(false);
+        setInputCode("");
+        setOutputCode("");
         break;
     }
   };
