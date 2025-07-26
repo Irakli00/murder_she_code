@@ -13,6 +13,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* ------------------------------ */
+/* ------------------------------ */
+/* ------------------------------ */
+textarea {
+  text-wrap: nowrap;
+}
+/* ------------------------------ */
+/* ------------------------------ */
+/* ------------------------------ */
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -160,7 +170,6 @@ button:focus-visible {
   font-size: 1.5rem;
   font-weight: 600;
   color: #fbbf24;
-  margin-bottom: 0.75rem;
   text-align: left;
 }
 
@@ -200,20 +209,19 @@ button:focus-visible {
   box-shadow: 0 0 0 3px rgba(75, 85, 99, 0.1);
 }
 
-/* .code-textarea::-webkit-scrollbar {
-  width: 8px;
-}
+.output-header,
+.input-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-.code-textarea::-webkit-scrollbar-track {
-  background: #374151;
-  border-radius: 4px;
+  margin-bottom: 0.75rem;
+  height: 45px;
 }
-
-.code-textarea::-webkit-scrollbar-thumb {
-  background: #6b7280;
-  border-radius: 4px;
+.output-header button {
+  background-color: #fbbf24;
+  color: #333;
 }
-
-.code-textarea::-webkit-scrollbar-thumb:hover {
-  background: #9ca3af;
-} */
+.output-header button:hover {
+  border: 1px solid #f9fafb;
+}
