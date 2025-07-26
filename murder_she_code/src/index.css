@@ -14,8 +14,8 @@
 }
 
 * {
-  box-sizing: border-box;
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -146,7 +146,7 @@ button:focus-visible {
   flex-direction: row;
   justify-content: space-between;
 
-  gap: 2rem;
+  gap: 20px;
 }
 
 .input-section,
