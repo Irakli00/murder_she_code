@@ -33,9 +33,10 @@ function CodeForm() {
 
       <section className="output-section">
         <div className="output-header">
-          <h3 className="section-title">Butchered Code</h3>
+          <h3 className="section-title">Improved Code</h3>
           {displayDanceBtn && (
             <button
+              className="btn"
               onClick={() => {
                 setDisplayDanceBtn(false);
                 scrambleDance();
@@ -52,7 +53,7 @@ function CodeForm() {
             id="output-code"
             className="code-textarea"
             readOnly
-            placeholder="Your butchered code will appear here..."
+            placeholder="Your improved code will appear here..."
             aria-describedby="output-help"
             value={outputCode}
           ></textarea>

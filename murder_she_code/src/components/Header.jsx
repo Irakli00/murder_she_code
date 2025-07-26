@@ -2,7 +2,7 @@ function Header() {
   return (
     <header className="container">
       <h1>Uglier</h1>
-      <p>Making your code absolutely unreadable</p>
+      <p>Make your senior dev suffer</p>
     </header>
   );
 }

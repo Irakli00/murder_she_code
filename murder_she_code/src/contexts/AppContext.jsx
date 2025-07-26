@@ -54,7 +54,7 @@ console.log("Total:", calculateTotal(cart));`);
       setOutputCode(result);
     } catch (error) {
       const errorMsg = `No Indentbutchering failed: ${error.message}`;
-      setOutputCode(`It's butchered enough`);
+      setOutputCode(`It's improved enough`);
       throw new Error(errorMsg);
     }
   }
@@ -92,7 +92,7 @@ console.log("Total:", calculateTotal(cart));`);
       setOutputCode(result);
     } catch (error) {
       const errorMsg = `Monster lines butchering failed: ${error.message}`;
-      setOutputCode(`It's butchered enough`);
+      setOutputCode(`It's improved enough`);
       throw new Error(errorMsg);
     }
   }
@@ -126,7 +126,7 @@ console.log("Total:", calculateTotal(cart));`);
       setOutputCode(result);
     } catch (error) {
       const errorMsg = `Random tab chaos failed: ${error.message}`;
-      setOutputCode(`It's butchered enough`);
+      setOutputCode(`It's improved enough`);
       throw new Error(errorMsg);
     }
   }
@@ -158,7 +158,7 @@ console.log("Total:", calculateTotal(cart));`);
     const lines = code.split("\n");
 
     // Find the maximum line length
-    const maxLength = Math.max(...lines.map((line) => line.length)) + 30;
+    const maxLength = Math.max(...lines.map((line) => line.length)) + 70;
 
     const result = lines
       .map((line) => {
@@ -210,9 +210,13 @@ console.log("Total:", calculateTotal(cart));`);
         break;
       case "python":
         python(code);
+        setDisplayDanceBtn(false);
+
         break;
       case "php":
         php(code);
+        setDisplayDanceBtn(false);
+
         break;
     }
   };
