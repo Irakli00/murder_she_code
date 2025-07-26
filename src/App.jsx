@@ -7,7 +7,7 @@ function App() {
     <>
       <Header></Header>
       <main>
-        <Controls code={""}></Controls>
+        <Controls></Controls>
         <CodeForm></CodeForm>
       </main>
     </>
