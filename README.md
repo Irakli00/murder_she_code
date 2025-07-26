@@ -4,13 +4,13 @@
     Well, good news, random citizen… Not anymore.”
 
 🔥 Introducing Uglier
+![Uglier Screenshot](./src/assets/Screenshot%20from%202025-07-26%2020-41-14.png)
 
 A web abomination inspired by the beloved VS Code extension Prettier and built in React.
 But unlike Prettier, Uglier makes your code look like it wasn't written by AI.
 
 💡 What Does It Do?
-![Uglier Screenshot](./src/assets/Screenshot%20from%202025-07-26%2020-41-14.png)
-
+![Uglier in Action](./src/assets/Screencastfrom2025-07-2620-43-37-ezgif.com-video-to-gif-converter.gif)
 Uglier takes your perfectly fine code… and ruins it.
 
     Want your indentation to be a mess? ✅
