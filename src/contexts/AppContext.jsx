@@ -161,15 +161,23 @@ console.log("Total:", calculateTotal(cart));`);
     // Find the maximum line length
     const maxLength = Math.max(...lines.map((line) => line.length)) + 70;
 
+    const chars = ["{", "}", ";"];
+
     const result = lines
       .map((line) => {
-        if (line.includes(";")) {
-          // Remove semicolon, pad to max length, then add semicolon at the end
-          const withoutSemi = line.replace(/;/g, "");
-          const padding = Math.max(0, maxLength - withoutSemi.length);
-          return withoutSemi + " ".repeat(padding) + ";";
-        }
-        return line;
+        let newLine = line;
+
+        chars.forEach((char) => {
+          if (newLine.includes(char)) {
+            if (newLine.includes("{") & newLine.includes("}")) return;
+            const regex = new RegExp(`\\${char}`, "g");
+            const withoutChar = newLine.replace(regex, "");
+            const padding = Math.max(0, maxLength - withoutChar.length);
+            newLine = withoutChar + " ".repeat(padding) + char;
+          }
+        });
+
+        return newLine;
       })
       .join("\n");
 
