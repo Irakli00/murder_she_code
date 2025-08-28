@@ -43,7 +43,7 @@ Please don’t sue me.
 
 🔗 Try It Out!
 
-👉 [https://startling-puffpuff-6c728d.netlify.app/](https://uglier.netlify.app/)
+👉 https://uglier.netlify.app/
 
 Or Run It Locally:
 Clone the repo and fire it up in just two commands:
